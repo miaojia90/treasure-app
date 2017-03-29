@@ -1,0 +1,15 @@
+$r_750:640/750/2/32;
+@function remchange($px) {
+    @return $px * $r_750 * 1rem;
+};
+.logo-box{
+  width: remchange(140);
+  margin: 0 auto;
+  padding-top:remchange(240);
+  border-radius: 50%;
+  img{
+     width: remchange(140);
+     height: remchange(140);
+  }
+}
+
