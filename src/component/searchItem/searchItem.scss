@@ -1,0 +1,75 @@
+$r_750:640/750/2/32;
+@function remchange($px) {
+    @return $px * $r_750 * 1rem;
+};
+  .list-item-view{
+    border-bottom:1px solid #DBDEE4;
+    padding:remchange(10) remchange(15);
+    position:relative;
+    background-color:#FFF;  
+    .item-title{
+      font-size: remchange(15) ;
+      color: #232D4B;
+      position:relative;
+      .itemName{
+        width: 100%;
+        display: inline-block;
+        text-overflow:ellipsis; 
+        white-space:nowrap; 
+        overflow:hidden; 
+      }
+    }
+    .item-data{
+      overflow: hidden;
+      text-align: center;
+      .data-left-text{
+        float: left;
+        color: #9AA0AC;
+        font-size: remchange(22);
+        height:remchange(80);
+        line-height: remchange(80);
+        .data-date{
+         font-size: remchange(11);
+        }
+      }
+      .data-right-text{
+        float:right;
+        color:#B4923B;
+        height:remchange(80);
+        line-height: remchange(80);
+        font-size: remchange(32);
+        text-align: right;
+      }
+    }
+    
+    .item-data-desc{
+      font-size: remchange(12);
+      color:#9AA0AC;
+      overflow: hidden;
+      .data-left-text{
+         float:left;
+      }
+      .data-right-text{
+        float:right;
+      }
+    }
+    
+    .item-mark{
+      margin-top: remchange(5);
+      font-size: remchange(11);
+      color: #9AA0AC;
+      overflow: hidden;
+      // height: remchange(30);
+      line-height: remchange(30);
+      .mark-text{
+        display: inline-block;
+        border:1px solid #9AA0AC;
+        padding:0 remchange(8);
+        border-radius:remchange(9);
+        margin-right:remchange(12);
+        margin-top: remchange(5);
+        height: remchange(18);
+        line-height: remchange(18);
+      }
+    }
+  }

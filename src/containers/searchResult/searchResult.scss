@@ -1,0 +1,9 @@
+$r_750:640/750/2/32;
+@function remchange($px) {
+    @return $px * $r_750 * 1rem;
+};
+
+.search-input-component{
+	padding-bottom:remchange(30);
+	border-bottom: 1px solid #DBDEE4;
+}

@@ -4,9 +4,10 @@ import {History, Link } from 'react-router';
 import { connect } from 'react-redux';
 import { is, fromJS} from 'immutable';
 import SearchInput from '../../component/searchInput/searchInput';
-import IndexStyle from './index.scss';
+import SearchItem from '../../component/searchItem/searchItem';
 import {searchAction} from '../../redux/actions/indexAction';
-class Index extends Component {
+import SearchResultStyle from './searchResult.scss'
+class SearchResult extends Component {
     constructor() {
         super();  
     }
@@ -14,10 +15,10 @@ class Index extends Component {
         const { dispatch} = this.props;
         return (
            <div className="main-box">
-             <div className="logo-box">
-                <img src="https://wx.jinfuzi.com/images/index/logo2.png" alt="logo"/>
+             <div className="search-input-component">
+                <SearchInput onAddClick={text=>dispatch(searchAction(text))} />
              </div>
-             <SearchInput onSearchClick={text=>dispatch(searchAction(text))} {...this.props}/>
+             <SearchItem className=""/>
            </div>
         )
     }
@@ -28,5 +29,5 @@ function select(state){
        
     };
 }
-export default connect(select)(Index);
+export default connect(select)(SearchResult);
 

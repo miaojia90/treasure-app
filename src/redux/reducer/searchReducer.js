@@ -9,12 +9,11 @@ function searchReducer(state = [], action) {
       return [
         ...state,
         {
-          text: action.text,
-          completed: false
+          text: action.text
         }
       ];
     default:
-      return state
+      return state;
   }
 }
 
