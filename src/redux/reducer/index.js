@@ -1,5 +1,8 @@
-import Immutable from 'immutable';
-import {combineReducers } from 'redux';
-import  searchReducer from './searchReducer'
-const Reducers = combineReducers({searchReducer});
-export default Reducers;
+import { combineReducers } from 'redux'
+import searchDataArry from './searchReducer'
+
+const rootReducer = combineReducers({
+  searchDataArry
+})
+
+export default rootReducer

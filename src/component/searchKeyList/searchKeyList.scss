@@ -1,0 +1,28 @@
+$r_750:640/750/2/32;
+@function remchange($px) {
+    @return $px * $r_750 * 1rem;
+};
+.search-history-title{
+    font-size:remchange(16); 
+    color: #9AA0AC;
+    text-align: left;
+}
+.item-mark{
+  margin-top: remchange(10);
+  font-size: remchange(11);
+  color: #9AA0AC;
+  overflow: hidden;
+  height: remchange(70);
+  line-height: remchange(70);
+  .mark-text{
+    display: inline-block;
+    border:1px solid #9AA0AC;
+    padding:remchange(6) remchange(12);
+    border-radius:remchange(9);
+    margin-right:remchange(12);
+    margin-top: remchange(10);
+    height: remchange(36);
+    line-height: remchange(36);
+  }
+}
+

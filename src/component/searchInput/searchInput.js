@@ -4,14 +4,17 @@ import SearchInputStyle from './searchInput.scss';
 // import { browserHistory } from 'react-router';
 
 export default class SearchInput extends Component {
-  constructor(props){
-      super(props);
+  constructor(props,context){
+      super(props,context);
+      this.state={
+        text:this.props.text || ''
+      };
   }
   render() {
     return (
       <div className="search-view">
         <input type='text' ref='searchData'  className="search-input" placeholder="输入产品名称,如凯丰"/>
-        <button onClick={ e => this.handleClick(e) } className="search-btn">
+        <button onClick={this.handleClick.bind(this)} className="search-btn">
          查一下
         </button>
       </div>
@@ -23,14 +26,14 @@ export default class SearchInput extends Component {
     if(!text){
       return;
     }
-    this.props.onSearchClick(text);
+    this.props.onSave(text);
     //进入到下个页面显示列表数据
-    console.log("进入到下个页面");
-    // this.contents.history.pushState(null,'/searchResult');
-    // browserHistory.push('/searchResult');//跳转页面
+    // console.log("进入到下个页面");
+    // this.props.history.pushState(null,'/searchResult');
   }
 }
 
 SearchInput.propTypes = {
-  onSearchClick: PropTypes.func.isRequired
+  onSave:PropTypes.func.isRequired,
+  text:PropTypes.string
 };
