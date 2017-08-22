@@ -3,13 +3,15 @@ $r_750:640/750/2/32;
     @return $px * $r_750 * 1rem;
 };
 .search-history-title{
-    font-size:remchange(16); 
-    color: #9AA0AC;
+    font-size:remchange(30); 
+    color:#123180;
     text-align: left;
+    padding:0 remchange(40);
 }
 .item-mark{
   margin-top: remchange(10);
-  font-size: remchange(11);
+  font-size: remchange(20);
+  padding:0 remchange(40);
   color: #9AA0AC;
   overflow: hidden;
   height: remchange(70);

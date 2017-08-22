@@ -2,8 +2,15 @@ $r_750:640/750/2/32;
 @function remchange($px) {
     @return $px * $r_750 * 1rem;
 };
-
-.search-input-component{
-	padding-bottom:remchange(30);
-	border-bottom: 1px solid #DBDEE4;
+.search-result-desc{
+	color:#071436;
+	font-weight:600;
+	font-size:remchange(30);
+	height:remchange(100);
+	line-height:remchange(100);
+	padding:0 remchange(30);
+	border-bottom:1px solid #DBDEE4;
+	.search-key{
+		color:#123180;
+	}
 }

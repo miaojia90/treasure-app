@@ -3,13 +3,13 @@ $r_750:640/750/2/32;
     @return $px * $r_750 * 1rem;
 };
 .search-view {
-    padding-top: remchange(40);
+    padding: remchange(40);
     overflow: hidden;
     display: flex;
     position: relative;
     .search-input {
       width: 100%;
-      font-size: remchange(16);
+      font-size: remchange(30);
         height: remchange(90);
         line-height: remchange(90);
         border: 0.5px solid #DBDEE4;
@@ -20,7 +20,7 @@ $r_750:640/750/2/32;
         color: #9AA0AC;
     }
     .search-btn {
-      font-size: remchange(16);
+      font-size: remchange(30);
         width: remchange(150);
         margin-right: 0;
         color: #FFF;

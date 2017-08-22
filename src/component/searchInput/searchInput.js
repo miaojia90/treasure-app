@@ -11,6 +11,7 @@ export default class SearchInput extends Component {
       };
   }
   render() {
+    var  searchValue = this.props.searchValue?this.props.searchValue:'';
     return (
       <div className="search-view">
         <input type='text' ref='searchData'  className="search-input" placeholder="输入产品名称,如凯丰"/>

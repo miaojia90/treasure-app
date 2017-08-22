@@ -3,23 +3,28 @@ import { findDOMNode } from 'react-dom';
 import SearchItemStyle from './searchItem.scss';
 
 export default class SearchList extends Component {
+
   render() {
+    var projectName=this.props.projectName;
+    var unitValue=this.props.unitValue;
+    var date=this.props.date;
+    var receipts=this.props.receipts;
     return (
       <div className="list-item-view">
           <div className="item-title">
-             <span className="itemName">项目名称</span>
+             <span className="itemName">{projectName}</span>
           </div> 
           <div className="item-data">
              <div className="data-left-text">
-               <span>单位净值</span>
+               <span>{unitValue}</span>
              </div>
              <div className="data-right-text">
-               <span>1.56</span>
+               <span>{receipts}</span>
              </div>
           </div>
           <div  className="item-data-desc" >
                <div className="data-left-text">
-                  单位净值<span className="data-date">(10-01)</span>
+                  单位净值<span className="data-date">({date})</span>
                </div>
                <div className="data-right-text">
                   累计收益   

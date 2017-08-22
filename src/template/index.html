@@ -15,6 +15,93 @@
     var iWidth = document.documentElement.clientWidth;
     document.getElementsByTagName("html")[0].style.fontSize = iWidth / 10 + "px";
     </script>
+    <style type="text/css">
+    * {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+    /* reset */
+    
+    body,
+    div,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    ul,
+    ol,
+    li,
+    form,
+    input,
+    table,
+    th,
+    td {
+        margin: 0;
+        padding: 0;
+    }
+    
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong {
+        font-weight: 400;
+    }
+    
+    i,
+    em {
+        font-style: normal;
+    }
+    
+    ul,
+    ol {
+        list-style-type: none;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    img {
+        display: block;
+        width: 100%;
+    }
+    
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+    
+    body {
+        -webkit-text-size-adjust: none;
+        -webkit-user-select: none;
+        font-family: "Helvetica Neue", Helvetica, sans-serif;
+    }
+    </style>
+    <script type="text/javascript" src="http://mockjs.com/dist/mock.js"></script>
+    <script type="text/javascript">
+    //调用mock方法模拟数据
+    Mock.mock(
+        'http://mockjs', {
+            "userName": '@name', //模拟名称
+            "age|1-100": 100, //模拟年龄(1-100)
+            "color": "@color", //模拟色值
+            "date": "@date('yyyy-MM-dd')", //模拟时间
+            "url": "@url()", //模拟url
+            "content": "@cparagraph()" //模拟文本
+        }
+    );
+
+    Mock.mock('http://g.cn.1', {
+        'name': '@name',
+        'age|1-100': 100,
+        'color': '@color'
+    });
+    </script>
 </head>
 
 <body>
